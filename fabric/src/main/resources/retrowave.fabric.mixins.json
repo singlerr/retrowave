@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "io.github.singlerr.retrowave.fabric.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "io.github.singlerr.retrowave.mixinplugin.RetrowaveMixinPlugin",
+  "minVersion": "0.8",
+  "client": [
+    "fixes.MixinFixWorldNotLoading"
+  ],
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

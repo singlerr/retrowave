@@ -1,0 +1,9 @@
+**/.architectury-transformer/
+/.idea/
+/*/build/
+/.gradle/
+/**/.gradle/
+/**/run/
+/libs
+/**/libs
+/todo.txt

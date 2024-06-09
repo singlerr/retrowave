@@ -1,0 +1,36 @@
+{
+  "required": true,
+  "package": "io.github.singlerr.retrowave.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "io.github.singlerr.retrowave.mixinplugin.RetrowaveMixinPlugin",
+  "minVersion": "0.8",
+  "client": [
+    "misc.MixinRemoveCooldown",
+    "misc.MixinImmediateModelUpdate",
+    "misc.MixinWheelClickToPick",
+    "misc.MixinChangeOpenToolKeyCode",
+    "misc.MixinKeepPressToOpenToolMenu",
+    "misc.MixinDisableToast",
+    "fixes.MixinFixDelayedChiseling",
+    "fixes.MixinFixBlockStateNotFoundError",
+    "fixes.MixinFixOverwritingBlock",
+    "fixes.MixinFixWorldNotLoading",
+    "features.replace.MixinChiselingOpSetting",
+    "features.replace.MixinApplyChiselingOpExtToItem",
+    "features.replace.MixinApplyChiselingOpExtension",
+    "features.replace.connected.material.MixinApplyReplaceMode",
+    "features.replace.connected.plane.MixinApplyReplaceMode",
+    "features.replace.cubed.MixinApplyReplaceMode",
+    "features.replace.draw.cube.MixinApplyReplaceMode",
+    "features.replace.draw.line.MixinApplyReplaceMode",
+    "features.replace.draw.wall.MixinApplyReplaceMode",
+    "features.replace.line.MixinApplyReplaceMode",
+    "features.replace.plane.MixinApplyReplaceMode",
+    "features.replace.sphere.MixinApplyReplaceMode"
+  ],
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
