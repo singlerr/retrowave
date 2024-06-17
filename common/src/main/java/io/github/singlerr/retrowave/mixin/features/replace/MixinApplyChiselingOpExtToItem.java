@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BitItem.class)
 public abstract class MixinApplyChiselingOpExtToItem {
 
-    @Inject(method = "handleRightClickProcessing", at = @At("HEAD"), remap = false)
+    @Inject(method = "handleRightClickProcessing", at = @At("HEAD"))
     private void retrowave$setReplaceMode(Player playerEntity, InteractionHand hand, BlockPos position, Direction face, ClickProcessingState currentState, CallbackInfoReturnable<ClickProcessingState> cir){
 
     }

@@ -1,11 +1,13 @@
 {
   "required": true,
-  "package": "io.github.singlerr.retrowave.fabric.mixin",
+  "package": "io.github.singlerr.retrowave.mixin",
   "compatibilityLevel": "JAVA_17",
   "plugin": "io.github.singlerr.retrowave.mixinplugin.RetrowaveMixinPlugin",
   "minVersion": "0.8",
   "client": [
-    "fixes.MixinFixWorldNotLoading"
+    "misc.MixinWheelClickToPick",
+    "misc.MixinChangeOpenToolKeyCode",
+    "misc.MixinKeepPressToOpenToolMenu"
   ],
   "mixins": [
   ],

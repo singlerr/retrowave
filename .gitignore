@@ -4,6 +4,6 @@
 /.gradle/
 /**/.gradle/
 /**/run/
-/libs
+/common/libs
 /**/libs
 /todo.txt

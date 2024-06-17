@@ -19,7 +19,7 @@ public abstract class MixinRemoveCooldown {
         instance.removeCooldown(item);
     }
 
-    @Inject(method = "canUse", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "canUse", at = @At("HEAD"), cancellable = true)
     private void retrowave$removeChiselCooldown(Player playerEntity, ItemStack stack, CallbackInfoReturnable<Boolean> cir){
         cir.setReturnValue(true);
         cir.cancel();

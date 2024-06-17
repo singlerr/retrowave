@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 @Mixin(ChiseledBlock.class)
 public abstract class MixinWheelClickToPick {
 
-    @Redirect(method = "getCloneItemStack", at = @At(value = "INVOKE", target = "Lmod/chiselsandbits/api/config/IClientConfiguration;getInvertPickBlockBehaviour()Ljava/util/function/Supplier;"), remap = false)
+    @Redirect(method = "getCloneItemStack", at = @At(value = "INVOKE", target = "Lmod/chiselsandbits/api/config/IClientConfiguration;getInvertPickBlockBehaviour()Ljava/util/function/Supplier;"))
     private Supplier retrowave$forceClone(IClientConfiguration instance){
 
         return () -> true;

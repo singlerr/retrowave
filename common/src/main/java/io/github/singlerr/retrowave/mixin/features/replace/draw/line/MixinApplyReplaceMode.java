@@ -69,7 +69,7 @@ public abstract class MixinApplyReplaceMode implements MixinHelper {
         });
     }
 
-    @Inject(method = "onRightClickBy", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "onRightClickBy", at = @At("HEAD"), cancellable = true)
     private void retrowave$onReplaceMode(Player playerEntity, IChiselingContext context, CallbackInfoReturnable<ClickProcessingState> cir){
         if(getChiselingOpExtension(context.getModeOfOperandus()).isReplacing()){
             cir.setReturnValue(replace(playerEntity, context));
@@ -77,7 +77,7 @@ public abstract class MixinApplyReplaceMode implements MixinHelper {
         }
     }
 
-    @Inject(method = "onStoppedRightClicking", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "onStoppedRightClicking", at = @At("HEAD"), cancellable = true)
     private void retrowave$onReplaceModeEnd(Player playerEntity, IChiselingContext context, CallbackInfo ci){
         if(getChiselingOpExtension(context.getModeOfOperandus()).isReplacing()){
             replaceEnd(playerEntity, context);

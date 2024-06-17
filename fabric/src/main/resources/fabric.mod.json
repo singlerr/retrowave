@@ -19,18 +19,23 @@
       "io.github.singlerr.retrowave.fabric.RetrowaveFabric"
     ],
     "client": [
-      "io.github.singlerr.retrowave.fabric.client.ExampleModFabricClient"
+      "io.github.singlerr.retrowave.fabric.client.RetrowaveFabricClient"
     ]
   },
   "mixins": [
-    "retrowave.fabric.mixins.json",
-    "retrowave.mixins.json"
+    "retrowave.immediate.chiseling.mixins.json",
+    "retrowave.replace.mode.mixins.json",
+    "retrowave.old.style.mixins.json",
+    "retrowave.misc.mixins.json",
+    "retrowave.fabric.old.style.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.7",
     "minecraft": "~1.20.4",
     "java": ">=17",
-    "fabric-api": "*"
+    "fabric-api": "*",
+    "scena": ">=1.0.140",
+    "chiselsandbits": ">=1.5.10-FC"
   },
   "suggests": {
     "another-mod": "*"

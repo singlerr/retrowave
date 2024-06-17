@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ChiselsAndBitsNotificationToast.class)
 public abstract class MixinDisableToast {
 
-    @Inject(method = "notifyOf", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "notifyOf", at = @At("HEAD"), cancellable = true, remap = false)
     private static <G extends IWithColor & IWithIcon & IWithText> void retrowave$disableToast(G contents, CallbackInfo ci){
         ci.cancel();
     }

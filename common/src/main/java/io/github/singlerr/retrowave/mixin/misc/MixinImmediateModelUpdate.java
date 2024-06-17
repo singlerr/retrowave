@@ -17,11 +17,8 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @Mixin(targets = {"mod.chiselsandbits.registrars.ModEventHandler$2"})
 public abstract class MixinImmediateModelUpdate {
 
-    @Inject(method = "handle", at = @At(value = "RETURN", shift = At.Shift.BEFORE), remap = false, locals = LocalCapture.CAPTURE_FAILEXCEPTION)
+    @Inject(method = "handle", at = @At(value = "RETURN", shift = At.Shift.BEFORE), locals = LocalCapture.CAPTURE_FAILEXCEPTION)
     private void retrowave$applySwingEffect(Player player, InteractionHand interactionHand, ItemStack itemStack, BlockPos blockPos, Direction direction, IPlayerRightClickBlockEvent.Result result, CallbackInfoReturnable<IPlayerRightClickBlockEvent.Result> cir, ClickProcessingState state) {
-//        player.swing(interactionHand);
-        if(! (player.level().getBlockEntity(blockPos) instanceof ChiseledBlockEntity blockEntity))
-            return;
-//        blockEntity.updateModelData();
+
     }
 }
